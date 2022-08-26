@@ -10,32 +10,32 @@ fi
 source /opt/fsl-imx-x11/4.1.15-2.1.0/environment-setup-cortexa7hf-neon-poky-linux-gnueabi
 #!/bin/bash
 #编译前先清除
-make distclean
+# make distclean
 #配置defconfig文件
-make imx_v7_defconfig -j 16
+# make imx_v7_defconfig -j 16
 #开始编译zImage
 make zImage -j 16
 #eMMC类型核心板
 #编译正点原子各种显示设备的设备树，若用户没有屏，
 #启动时默认会选择imx6ull-14x14-emmc-4.3-480x272-c.dtb加载
-make imx6ull-14x14-emmc-10.1-1280x800-c.dtb
-make imx6ull-14x14-emmc-7-1024x600-c.dtb
-make imx6ull-14x14-emmc-7-800x480-c.dtb
-make imx6ull-14x14-emmc-4.3-800x480-c.dtb
-make imx6ull-14x14-emmc-4.3-480x272-c.dtb
-make imx6ull-14x14-emmc-hdmi.dtb
-make imx6ull-14x14-emmc-vga.dtb
+# make imx6ull-14x14-emmc-10.1-1280x800-c.dtb
+# make imx6ull-14x14-emmc-7-1024x600-c.dtb
+# make imx6ull-14x14-emmc-7-800x480-c.dtb
+# make imx6ull-14x14-emmc-4.3-800x480-c.dtb
+# make imx6ull-14x14-emmc-4.3-480x272-c.dtb
+# make imx6ull-14x14-emmc-hdmi.dtb
+# make imx6ull-14x14-emmc-vga.dtb
 
 #NandFlash类型核心板
 #编译正点原子各种显示设备的设备树，若用户没有屏，
 #启动时默认会选择imx6ull-14x14-nand-4.3-480x272-c.dtb加载
-make imx6ull-14x14-nand-10.1-1280x800-c.dtb
-make imx6ull-14x14-nand-7-1024x600-c.dtb
-make imx6ull-14x14-nand-7-800x480-c.dtb
-make imx6ull-14x14-nand-4.3-800x480-c.dtb
+# make imx6ull-14x14-nand-10.1-1280x800-c.dtb
+# make imx6ull-14x14-nand-7-1024x600-c.dtb
+# make imx6ull-14x14-nand-7-800x480-c.dtb
+# make imx6ull-14x14-nand-4.3-800x480-c.dtb
 make imx6ull-14x14-nand-4.3-480x272-c.dtb
-make imx6ull-14x14-nand-vga.dtb
-make imx6ull-14x14-nand-hdmi.dtb
+# make imx6ull-14x14-nand-vga.dtb
+# make imx6ull-14x14-nand-hdmi.dtb
 #编译内核模块
 make modules -j 16
 #在当前目录下新建一个tmp目录，用于存放编译后的目标文件
