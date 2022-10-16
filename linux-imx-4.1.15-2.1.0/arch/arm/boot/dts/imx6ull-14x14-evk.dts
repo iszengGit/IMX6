@@ -453,7 +453,7 @@
 			fsl,pins = <
 				MX6UL_PAD_UART1_RTS_B__GPIO1_IO19	0x17059 /* SD1 CD */
 				MX6UL_PAD_GPIO1_IO05__USDHC1_VSELECT	0x17059 /* SD1 VSELECT */
-				MX6UL_PAD_GPIO1_IO00__ANATOP_OTG1_ID    0x13058 /* USB_OTG1_ID */
+				//MX6UL_PAD_GPIO1_IO00__ANATOP_OTG1_ID    0x13058 /* USB_OTG1_ID */
 			>;
 		};
 
@@ -473,7 +473,8 @@
 				MX6UL_PAD_CSI_DATA07__CSI_DATA09	0x1b088
 			>;
 		};
-
+		
+		/*
                 pinctrl_ds18b20: 18b20 {
                         fsl,pins = <
                                 MX6UL_PAD_GPIO1_IO01__GPIO1_IO01        0x17059
@@ -485,6 +486,7 @@
                                 MX6UL_PAD_GPIO1_IO01__GPIO1_IO01        0x17059
                         >;
                 };
+		*/
 
 		pinctrl_enet1: enet1grp {
 			fsl,pins = <
@@ -636,10 +638,10 @@
 
 		pinctrl_tsc: tscgrp {
 			fsl,pins = <
-				MX6UL_PAD_GPIO1_IO01__GPIO1_IO01	0xb0
+	/*			MX6UL_PAD_GPIO1_IO01__GPIO1_IO01	0xb0
 				MX6UL_PAD_GPIO1_IO02__GPIO1_IO02	0xb0
 				MX6UL_PAD_GPIO1_IO03__GPIO1_IO03	0xb0
-				MX6UL_PAD_GPIO1_IO04__GPIO1_IO04	0xb0
+				MX6UL_PAD_GPIO1_IO04__GPIO1_IO04	0xb0 */
 			>;
 		};
 
